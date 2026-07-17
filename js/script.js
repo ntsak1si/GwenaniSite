@@ -1,3 +1,22 @@
+const heroHeadline = document.querySelector("#hero-headline");
+
+if (heroHeadline) {
+  const headlines = [
+    "Building the foundations for a stronger tomorrow.",
+    "Quality infrastructure. Lasting impact.",
+    "Turning vision into dependable construction.",
+    "Building progress, one project at a time.",
+    "Creating infrastructure communities can rely on."
+  ];
+  let currentHeadline = Math.floor(Math.random() * headlines.length);
+  heroHeadline.textContent = headlines[currentHeadline];
+
+  setInterval(() => {
+    currentHeadline = (currentHeadline + 1) % headlines.length;
+    heroHeadline.textContent = headlines[currentHeadline];
+  }, 30 * 60 * 1000);
+}
+
 const enquiryForm = document.querySelector("#enquiry-form");
 
 if (enquiryForm) {
